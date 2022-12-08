@@ -1,0 +1,11 @@
+graft src/affinitic
+graft docs
+include *.rst
+global-exclude *.pyc
+exclude *.cfg
+exclude .coveragerc
+exclude .editorconfig
+exclude .mcli
+exclude Dockerfile
+exclude Makefile
+exclude cookiecutter.json

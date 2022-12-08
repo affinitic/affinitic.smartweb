@@ -1,0 +1,6 @@
+[report]
+include =
+    src/affinitic/*
+omit =
+    */test*
+    */upgrades/*

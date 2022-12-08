@@ -1,0 +1,16 @@
+{
+  "project_name": "Affinitic Smartweb",
+  "project_slug": "affinitic.smartweb",
+  "project_class": "AffiniticSmartweb",
+  "project_const": "AFFINITIC_SMARTWEB",
+  "project_path": "affinitic/smartweb",
+  "author_name": "Affinitic",
+  "author_email": "support@affinitic.be",
+  "author_git_username": "",
+  "package_description": "An agnostic version of IMIO Smartweb",
+  "plone_version": "6.0.0rc1",
+  "python_version": "3.8",
+  "git": "gitlab",
+  "organisation": "affinitic-addons",
+  "licences": "GPLv2"
+}
