@@ -2,6 +2,9 @@
 <metadata>
   <version>1000</version>
   <dependencies>
-    <!--<dependency>profile-plone.app.dexterity:default</dependency>-->
+    <dependency>profile-imio.smartweb.policy:default</dependency>
+    <dependency>profile-pas.plugins.authomatic:uninstall</dependency>
+    <dependency>profile-pas.plugins.imio:uninstall</dependency>
+<!--    <dependency>profile-collective.pivot:uninstall</dependency>-->
   </dependencies>
 </metadata>

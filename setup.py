@@ -51,6 +51,7 @@ setup(
         "plone.app.dexterity",
         "plone.restapi",
         "z3c.jbot",
+        "imio.smartweb.policy",
     ],
     extras_require={
         "test": [

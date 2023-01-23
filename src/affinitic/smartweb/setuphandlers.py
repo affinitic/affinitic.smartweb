@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.interfaces import INonInstallable
+from affinitic.smartweb.utils import delete_i_am_i_find_folders
 from zope.interface import implementer
 
 
@@ -15,6 +16,8 @@ class HiddenProfiles(object):
 def post_install(context):
     """Post install script"""
     # Do something at the end of the installation of this package.
+
+    delete_i_am_i_find_folders(context)
 
 
 def uninstall(context):
