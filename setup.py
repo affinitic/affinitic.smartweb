@@ -4,6 +4,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
+
 long_description = "\n\n".join(
     [
         open("README.rst").read(),
@@ -52,7 +53,7 @@ setup(
         "plone.restapi",
         "z3c.jbot",
         "imio.smartweb.policy",
-        "plone.app.multilingual"
+        "plone.app.multilingual",
     ],
     extras_require={
         "test": [

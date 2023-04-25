@@ -1,9 +1,10 @@
+from Products.CMFCore.interfaces import IFolderish
 from imio.smartweb.locales import SmartwebMessageFactory as _isw
-from plone.i18n.normalizer import IIDNormalizer
 from plone import api
+from plone.i18n.normalizer import IIDNormalizer
 from zope.component import getUtility
 from zope.i18n import translate
-from Products.CMFCore.interfaces import IFolderish
+
 
 def delete_i_am_i_find_folders(context):
     # TODO: context could be the Plone Site OR a Language Root Folder; handle both cases
@@ -15,6 +16,7 @@ def delete_i_am_i_find_folders(context):
         translated_id = normalizer.normalize(translated_title)
         if translated_id in portal:
             api.content.delete(obj=portal[translated_id])
+
 
 def check_if_folder_exist(context, folder_id):
     if getattr(context, folder_id, False):

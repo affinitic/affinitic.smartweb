@@ -12,8 +12,8 @@ from zope import schema
 from zope.globalrequest import getRequest
 from zope.i18n import translate
 from zope.interface import implementer
-from zope.schema.interfaces import IContextAwareDefaultFactory
 from zope.interface import provider
+from zope.schema.interfaces import IContextAwareDefaultFactory
 
 
 @provider(IContextAwareDefaultFactory)

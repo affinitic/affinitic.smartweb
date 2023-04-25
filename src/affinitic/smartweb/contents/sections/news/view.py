@@ -1,10 +1,10 @@
-
-from plone import api
+from Products.CMFPlone.utils import normalizeString
 from imio.smartweb.core.config import NEWS_URL
 from imio.smartweb.core.contents.sections.news.view import NewsView
 from imio.smartweb.core.utils import batch_results
 from imio.smartweb.core.utils import get_json
-from Products.CMFPlone.utils import normalizeString
+from plone import api
+
 
 class AffiniticNewsView(NewsView):
     """News Section view"""
@@ -14,12 +14,9 @@ class AffiniticNewsView(NewsView):
         max_items = self.context.nb_results_by_batch * self.context.max_nb_batches
         news = sorted(
             self.context.linking_rest_view.to_object.listFolderContents(),
-            key=lambda x: x.effective_date if x.effective_date else x.creation_date
+            key=lambda x: x.effective_date if x.effective_date else x.creation_date,
         )
-        if (
-            news is None
-            or len(news) == 0  # NOQA
-        ):
+        if news is None or len(news) == 0:  # NOQA
             return []
         image_scale = self.image_scale
         results = []
@@ -41,5 +38,3 @@ class AffiniticNewsView(NewsView):
             )
         res = batch_results(results, self.context.nb_results_by_batch)
         return res
-    
-    
