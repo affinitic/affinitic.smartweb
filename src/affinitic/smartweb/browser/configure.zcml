@@ -18,4 +18,13 @@
     directory="static"
     />
 
+  <browser:page
+    name="import_content"
+    for="zope.interface.Interface"
+    class=".import_document.CustomImportDocumentContent"
+    layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+    permission="cmf.ManagePortal"
+    />
+
+
 </configure>
