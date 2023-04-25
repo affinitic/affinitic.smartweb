@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:page
+      name="view"
+      for="affinitic.smartweb.contents.ISectionEventInfos"
+      class="affinitic.smartweb.contents.sections.event_infos.view.EventInfosView"
+      template="view.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      />
+
+</configure>

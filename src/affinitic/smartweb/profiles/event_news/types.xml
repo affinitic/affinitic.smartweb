@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<object name="portal_types" meta_type="Plone Types Tool">
+  <object meta_type="Dexterity FTI" name="affinitic.smartweb.Event"/>
+  <object meta_type="Dexterity FTI" name="affinitic.smartweb.News"/>
+  <object meta_type="Dexterity FTI" name="affinitic.smartweb.EventFolder"/>
+  <object meta_type="Dexterity FTI" name="affinitic.smartweb.NewsFolder"/>
+  <object meta_type="Dexterity FTI" name="affinitic.smartweb.SectionEventInfo"/>
+  <object meta_type="Dexterity FTI" name="affinitic.smartweb.SectionEvents"/>
+  <object meta_type="Dexterity FTI" name="affinitic.smartweb.SectionNews"/>
+  <object meta_type="Dexterity FTI" name="imio.smartweb.Page"/>
+</object>

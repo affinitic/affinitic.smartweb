@@ -20,6 +20,11 @@ def post_install(context):
     delete_i_am_i_find_folders(context)
 
 
+def post_install_types(context):
+    """Post install script"""
+    # Do something at the end of the installation of this package.
+
+
 def uninstall(context):
     """Uninstall script"""
     # Do something at the end of the uninstallation of this package.

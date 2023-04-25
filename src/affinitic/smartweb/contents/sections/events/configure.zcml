@@ -1,0 +1,46 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:page
+      name="table_view"
+      for="affinitic.smartweb.contents.ISectionEvents"
+      class="affinitic.smartweb.contents.sections.events.view.AffiniticEventsView"
+      template="../common_templates/table.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="Table view"
+      />
+
+  <browser:page
+      name="carousel_view"
+      for="affinitic.smartweb.contents.ISectionEvents"
+      class="affinitic.smartweb.contents.sections.events.view.AffiniticEventsView"
+      template="../common_templates/carousel.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="Carousel view"
+      />
+
+  <browser:page
+      name="list_view"
+      for="affinitic.smartweb.contents.ISectionEvents"
+      class="affinitic.smartweb.contents.sections.events.view.AffiniticEventsView"
+      template="../common_templates/list.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="List view"
+      />
+
+  <browser:page
+      for="affinitic.smartweb.contents.ISectionEvents"
+      name="macros"
+      template="macros.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      />
+
+</configure>

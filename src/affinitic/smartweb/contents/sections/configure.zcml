@@ -1,0 +1,8 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope">
+
+  <include package=".event_infos" />
+  <include package=".events" />
+  <include package=".news" />
+
+</configure>

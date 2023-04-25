@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:page
+      name="list_view"
+      for="imio.smartweb.core.contents.ISectionCollection"
+      class="imio.smartweb.core.contents.sections.collection.views.CollectionView"
+      template="../common_templates/list.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="List view"
+      />
+
+</configure>

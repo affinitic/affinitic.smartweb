@@ -8,6 +8,7 @@
   <i18n:registerTranslations directory="locales" />
 
   <include package=".browser" />
+  <include package=".contents" />
 
   <include file="permissions.zcml" />
 
@@ -18,6 +19,15 @@
     description="Installs the affinitic.smartweb add-on."
     provides="Products.GenericSetup.interfaces.EXTENSION"
     post_handler=".setuphandlers.post_install"
+    />
+
+  <genericsetup:registerProfile
+    name="Event and News Types"
+    title="affinitic.smartweb"
+    directory="profiles/event_news"
+    description="Installs Event and News types for smartweb"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    post_handler=".setuphandlers.post_install_types"
     />
 
   <genericsetup:registerProfile

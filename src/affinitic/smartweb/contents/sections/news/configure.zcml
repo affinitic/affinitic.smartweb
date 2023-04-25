@@ -1,0 +1,38 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+  <browser:page
+      name="table_view"
+      for="affinitic.smartweb.contents.ISectionNews"
+      class="affinitic.smartweb.contents.sections.news.view.AffiniticNewsView"
+      template="../common_templates/table.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="Table view"
+      />
+
+  <browser:page
+      name="carousel_view"
+      for="affinitic.smartweb.contents.ISectionNews"
+      class="affinitic.smartweb.contents.sections.news.view.AffiniticNewsView"
+      template="../common_templates/carousel.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="Carousel view"
+      />
+
+  <browser:page
+      name="list_view"
+      for="affinitic.smartweb.contents.ISectionNews"
+      class="affinitic.smartweb.contents.sections.news.view.AffiniticNewsView"
+      template="../common_templates/list.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="List view"
+      />
+
+</configure>
