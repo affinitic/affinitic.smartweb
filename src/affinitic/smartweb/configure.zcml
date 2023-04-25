@@ -31,6 +31,15 @@
     />
 
   <genericsetup:registerProfile
+    name="Add Portlet"
+    title="affinitic.smartweb"
+    directory="profiles/portlets"
+    description="Installs back portlets for smartweb"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    post_handler=".setuphandlers.post_install_portlets"
+    />
+
+  <genericsetup:registerProfile
     name="uninstall"
     title="affinitic.smartweb (uninstall)"
     directory="profiles/uninstall"

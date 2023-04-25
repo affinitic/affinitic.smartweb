@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+
+
+    <permission name="Portlets: Manage portlets" acquire="False">
+      <role name="Manager"/>
+    </permission>
+
+
+  </permissions>
+</rolemap>
