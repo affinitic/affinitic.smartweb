@@ -52,6 +52,7 @@ setup(
         "plone.restapi",
         "z3c.jbot",
         "imio.smartweb.policy",
+        "plone.app.multilingual"
     ],
     extras_require={
         "test": [
