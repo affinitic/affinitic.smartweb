@@ -5,6 +5,9 @@ Changelog
 1.0.0a2 (unreleased)
 --------------------
 
+- Fix missing section files
+  [Julien]
+
 - Remove iam from types behavior
   [Julien]
 
