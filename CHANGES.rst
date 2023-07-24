@@ -5,6 +5,9 @@ Changelog
 1.0.0a2 (unreleased)
 --------------------
 
+- Remove iam from types behavior
+  [Julien]
+
 - Fix for missing title and too long description
   [Julien]
 

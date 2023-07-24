@@ -53,7 +53,6 @@
     <element value="imio.smartweb.listing"/>
     <element value="collective.taxonomy.generated.event_category"/>
     <element value="imio.smartweb.topics"/>
-    <element value="imio.smartweb.iam"/>
     <element value="plone.categorization"/>
     <element value="collective.autopublishing.behavior.IAutoPublishing"/>
   </property>
