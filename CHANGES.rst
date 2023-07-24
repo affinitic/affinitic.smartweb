@@ -5,7 +5,8 @@ Changelog
 1.0.0a2 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix for missing title and too long description
+  [Julien]
 
 
 1.0.0a1 (2023-04-25)

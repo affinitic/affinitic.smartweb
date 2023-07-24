@@ -77,6 +77,27 @@ class CustomImportDocumentContent(ImportContent):
     def global_obj_hook_before_deserializing(self, obj, item):
         """Hook to modify the created obj before deserializing the data."""
         sections_content = item.get("section_content", False)
+
+        if (
+            "title" not in item
+            or not item["title"]
+            or item["title"].replace(" ", "") == ""
+        ):
+            item["title"] = item['id']
+            logger.warning(
+                "{} does not have a title, we take the id ({}) instead".format(
+                    item['@id'], item['id']
+                )
+            )
+
+        if item["description"] and len(item["description"]) > 700:
+            item["description"] = item["description"][:699]
+            logger.warning(
+                "{} have a descritpion to long, we trim it to 700 characters".format(
+                    item['@id'], item['id']
+                )
+            )
+
         if not sections_content:
             return obj, item
 
