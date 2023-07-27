@@ -7,6 +7,7 @@ from plone import api
 from plone.app.textfield.value import RichTextValue
 from six.moves.urllib.parse import unquote
 from six.moves.urllib.parse import urlparse
+from plone.i18n.normalizer import idnormalizer
 
 import logging
 
@@ -54,6 +55,9 @@ class CustomImportDocumentContent(ImportContent):
         return item
 
     def _create_text_section(self, text, title, container):
+        if idnormalizer.normalize(title) in container:
+            return
+
         api.content.create(
             container=container,
             type="imio.smartweb.SectionText",
@@ -67,6 +71,9 @@ class CustomImportDocumentContent(ImportContent):
         )
 
     def _create_gallery_section(self, id, container):
+        if id in container:
+            return
+
         api.content.create(
             container=container,
             type="imio.smartweb.SectionGallery",
