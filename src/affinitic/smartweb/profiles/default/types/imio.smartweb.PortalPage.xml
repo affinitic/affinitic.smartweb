@@ -20,4 +20,8 @@
     <element value="imio.smartweb.SectionText" />
     <element value="imio.smartweb.SectionVideo" />
   </property>
+
+<property name="behaviors" purge="false">
+    <element value="plone.ownership"/>
+  </property>
 </object>

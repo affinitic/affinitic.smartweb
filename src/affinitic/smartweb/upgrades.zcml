@@ -1,0 +1,14 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:upgradeStep
+    source="1000"
+    destination="1001"
+    title="Modfiy Smartweb type behavior"
+    description=""
+    profile="affinitic.smartweb:default"
+    handler=".upgrades.update_types"
+    />
+
+</configure>

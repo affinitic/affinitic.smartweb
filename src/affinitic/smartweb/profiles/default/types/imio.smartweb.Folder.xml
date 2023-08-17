@@ -17,4 +17,7 @@
 <!--    <element value="imio.smartweb.Procedure" />-->
   </property>
 
+  <property name="behaviors" purge="false">
+    <element value="plone.ownership"/>
+  </property>
 </object>

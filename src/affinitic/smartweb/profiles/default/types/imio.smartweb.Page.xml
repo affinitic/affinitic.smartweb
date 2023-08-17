@@ -18,7 +18,7 @@
   </property>
 
    <!-- Enabled behaviors -->
-  <property name="behaviors" purge="false">
+  <property name="behaviors" purge="true">
     <element value="plone.namefromtitle"/>
     <element value="plone.excludefromnavigation"/>
     <element value="plone.shortname"/>
@@ -32,5 +32,6 @@
     <element value="imio.smartweb.topics"/>
     <element value="plone.categorization"/>
     <element value="collective.autopublishing.behavior.IAutoPublishing"/>
+    <element value="plone.ownership"/>
   </property>
 </object>
