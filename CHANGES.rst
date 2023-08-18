@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a3 (unreleased)
+1.0.0a3 (2023-08-18)
 --------------------
 
 - Add ownership to event and news type
