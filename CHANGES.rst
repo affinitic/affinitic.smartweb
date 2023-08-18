@@ -5,6 +5,12 @@ Changelog
 1.0.0a2 (unreleased)
 --------------------
 
+- Modfiy Smartweb type behavior
+  [Julien]
+
+- Fix section duplication when reimporting data
+  [Julien]
+
 - Fix missing section files
   [Julien]
 
