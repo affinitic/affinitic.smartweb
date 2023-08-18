@@ -11,4 +11,13 @@
     handler=".upgrades.update_types"
     />
 
+  <genericsetup:upgradeStep
+    source="1000"
+    destination="1001"
+    title="Add ownership to event and news type"
+    description=""
+    profile="affinitic.smartweb:Event and News Types"
+    handler=".upgrades.update_types_event_news"
+    />
+
 </configure>

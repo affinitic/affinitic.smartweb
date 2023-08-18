@@ -55,6 +55,7 @@
     <element value="imio.smartweb.topics"/>
     <element value="plone.categorization"/>
     <element value="collective.autopublishing.behavior.IAutoPublishing"/>
+    <element value="plone.ownership"/>
   </property>
 
   <!-- View information -->

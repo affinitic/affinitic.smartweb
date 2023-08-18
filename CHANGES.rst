@@ -5,7 +5,8 @@ Changelog
 1.0.0a3 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Add ownership to event and news type
+  [Julien]
 
 
 1.0.0a2 (2023-08-18)

@@ -11,3 +11,13 @@ def update_types(context):
     portal_setup.runImportStepFromProfile(
         "profile-affinitic.smartweb:default", "typeinfo"
     )
+
+
+def update_types_event_news(context):
+    """
+    Update types
+    """
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runImportStepFromProfile(
+        "profile-affinitic.smartweb:Event and News Types", "typeinfo"
+    )
