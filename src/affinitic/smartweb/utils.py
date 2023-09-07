@@ -19,8 +19,9 @@ def delete_i_am_i_find_folders(context):
 
 
 def check_if_folder_exist(context, folder_id):
-    if getattr(context, folder_id, False):
-        if IFolderish.providedBy(context[folder_id]):
+    folder = getattr(context, folder_id, False)
+    if folder:
+        if IFolderish.providedBy(folder):
             return True
         else:
             raise TypeError(f"Item {folder_id} exist but not a folder")

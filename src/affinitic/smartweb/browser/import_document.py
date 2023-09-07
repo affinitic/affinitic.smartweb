@@ -154,8 +154,8 @@ class CustomImportDocumentContent(ImportContent):
                 folder = folder[element]
 
         if (
-            item["@type"] == "imio.smartweb.FolderNews Item"
-            or item["@type"] == "imio.smartweb.Folderaffinitic.smartweb.News"
+            item["@type"] == "News Item"
+            or item["@type"] == "affinitic.smartweb.News"
         ):
             if not check_if_folder_exist(folder, "news"):
                 folder = api.content.create(
@@ -165,11 +165,11 @@ class CustomImportDocumentContent(ImportContent):
                     title="News",
                 )
             else:
-                folder = folder["news"]
+                folder = getattr(folder, "news", False)
 
         if (
-            item["@type"] == "imio.smartweb.FolderEvent"
-            or item["@type"] == "imio.smartweb.Folderaffinitic.smartweb.Event"
+            item["@type"] == "Event"
+            or item["@type"] == "affinitic.smartweb.Event"
         ):
             if not check_if_folder_exist(folder, "events"):
                 folder = api.content.create(
@@ -179,7 +179,7 @@ class CustomImportDocumentContent(ImportContent):
                     title="Events",
                 )
             else:
-                folder = folder["events"]
+                folder = getattr(folder, "events", False)
 
         return folder
 
