@@ -5,7 +5,11 @@ Changelog
 1.0.0a4 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Update and fix types
+  [Julien]
+
+- Fix adding new and event folder
+  [Julien]
 
 
 1.0.0a3 (2023-08-18)
