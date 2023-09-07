@@ -2,6 +2,8 @@
   xmlns="http://namespaces.zope.org/zope"
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
+<!-- Default -->
+
   <genericsetup:upgradeStep
     source="1000"
     destination="1001"
@@ -12,9 +14,29 @@
     />
 
   <genericsetup:upgradeStep
+    source="1001"
+    destination="1002"
+    title="Update type to add SectionExternalContent"
+    description=""
+    profile="affinitic.smartweb:default"
+    handler=".upgrades.update_types"
+    />
+
+<!-- Event and News Types  -->
+
+  <genericsetup:upgradeStep
     source="1000"
     destination="1001"
     title="Add ownership to event and news type"
+    description=""
+    profile="affinitic.smartweb:Event and News Types"
+    handler=".upgrades.update_types_event_news"
+    />
+
+  <genericsetup:upgradeStep
+    source="1001"
+    destination="1002"
+    title="Update type"
     description=""
     profile="affinitic.smartweb:Event and News Types"
     handler=".upgrades.update_types_event_news"
