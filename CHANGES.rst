@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a5 (unreleased)
+1.0.0a5 (2023-09-08)
 --------------------
 
 - Fix event and news default layout
