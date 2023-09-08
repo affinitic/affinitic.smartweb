@@ -46,12 +46,12 @@ class CustomImportDocumentContent(ImportContent):
 
     def dict_hook_event(self, item):
         item["@type"] = "affinitic.smartweb.Event"
-        item["layout"] = "block_view"
+        item["layout"] = "full_view"
         return item
 
     def dict_hook_newsitem(self, item):
         item["@type"] = "affinitic.smartweb.News"
-        item["layout"] = "block_view"
+        item["layout"] = "full_view"
         return item
 
     def _create_text_section(self, text, title, container):

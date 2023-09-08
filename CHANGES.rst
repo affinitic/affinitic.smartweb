@@ -5,7 +5,8 @@ Changelog
 1.0.0a5 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix event and news default layout
+  [Julien]
 
 
 1.0.0a4 (2023-09-07)
