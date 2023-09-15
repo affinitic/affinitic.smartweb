@@ -4,5 +4,6 @@
   <include package=".event_infos" />
   <include package=".events" />
   <include package=".news" />
+  <include package=".collection" />
 
 </configure>

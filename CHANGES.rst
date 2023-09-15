@@ -5,7 +5,8 @@ Changelog
 1.0.0a6 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix collection section view
+  [Julien]
 
 
 1.0.0a5 (2023-09-08)
