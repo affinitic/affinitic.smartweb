@@ -5,7 +5,8 @@ Changelog
 1.0.0a7 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Change publish date location
+  [Julien]
 
 
 1.0.0a6 (2023-09-15)
