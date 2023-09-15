@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a6 (unreleased)
+1.0.0a6 (2023-09-15)
 --------------------
 
 - Fix collection section view
