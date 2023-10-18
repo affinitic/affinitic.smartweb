@@ -18,12 +18,12 @@ def delete_i_am_i_find_folders(context):
             api.content.delete(obj=portal[translated_id])
 
 
-def check_if_folder_exist(context, folder_id):
-    folder = getattr(context, folder_id, False)
+def check_if_folder_exist(context, folder_id, interface=IFolderish):
+    folder = getattr(context, folder_id, None)
     if folder:
-        if IFolderish.providedBy(folder):
+        if interface.providedBy(folder):
             return True
         else:
-            raise TypeError(f"Item {folder_id} exist but not a folder")
+            return False
     else:
         return False

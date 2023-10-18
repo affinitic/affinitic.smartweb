@@ -5,6 +5,9 @@ Changelog
 1.0.0a7 (unreleased)
 --------------------
 
+- Add option to choose interface in check folder
+  [jchandelle]
+
 - Change publish date location
   [Julien]
 
