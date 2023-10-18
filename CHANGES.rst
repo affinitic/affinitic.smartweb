@@ -5,6 +5,9 @@ Changelog
 1.0.0a7 (unreleased)
 --------------------
 
+- Fix event and news creation
+  [jchandelelle]
+
 - Add option to choose interface in check folder
   [jchandelle]
 

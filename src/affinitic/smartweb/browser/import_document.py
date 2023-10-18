@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from affinitic.smartweb.utils import check_if_folder_exist
+from affinitic.smartweb.contents import IEventFolder
+from affinitic.smartweb.contents import INewsFolder
 from collective.exportimport.import_content import ImportContent
 from os.path import join
 from plone import api
@@ -157,11 +159,10 @@ class CustomImportDocumentContent(ImportContent):
             item["@type"] == "News Item"
             or item["@type"] == "affinitic.smartweb.News"
         ):
-            if not check_if_folder_exist(folder, "news"):
+            if not check_if_folder_exist(folder, "news", INewsFolder):
                 folder = api.content.create(
                     container=folder,
                     type="affinitic.smartweb.NewsFolder",
-                    id="news",
                     title="News",
                 )
             else:
@@ -171,11 +172,10 @@ class CustomImportDocumentContent(ImportContent):
             item["@type"] == "Event"
             or item["@type"] == "affinitic.smartweb.Event"
         ):
-            if not check_if_folder_exist(folder, "events"):
+            if not check_if_folder_exist(folder, "events", IEventFolder):
                 folder = api.content.create(
                     container=folder,
-                    type="affinitic.smartweb.NewsFolder",
-                    id="events",
+                    type="affinitic.smartweb.EventFolder",
                     title="Events",
                 )
             else:
