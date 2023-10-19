@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<registry
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="affinitic.smartweb">
+
+      <records prefix="plone.bundles/affinitic-smartweb"
+             interface="Products.CMFPlone.interfaces.IBundleRegistry">
+      <value key="enabled">True</value>
+      <value key="csscompilation">++plone++affinitic.smartweb/dist/index.css</value>
+      <value key="load_async">False</value>
+      <value key="load_defer">False</value>
+    </records>
+
+</registry>

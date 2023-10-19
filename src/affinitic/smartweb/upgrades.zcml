@@ -22,6 +22,15 @@
     handler=".upgrades.update_types"
     />
 
+  <genericsetup:upgradeStep
+    source="1002"
+    destination="1003"
+    title="Add css bundles"
+    description=""
+    profile="affinitic.smartweb:default"
+    handler=".upgrades.update_registry"
+    />
+
 <!-- Event and News Types  -->
 
   <genericsetup:upgradeStep

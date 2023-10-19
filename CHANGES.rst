@@ -5,6 +5,9 @@ Changelog
 1.0.0a7 (unreleased)
 --------------------
 
+- Add bundels and hide workshop button
+  [jchandelle]
+
 - Fix event and news creation
   [jchandelelle]
 
