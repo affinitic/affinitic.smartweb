@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a8 (unreleased)
+1.0.0a8 (2023-10-19)
 --------------------
 
 - Compile Ressources and remove dist from gitignore
