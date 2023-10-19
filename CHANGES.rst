@@ -5,7 +5,8 @@ Changelog
 1.0.0a8 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Compile Ressources and remove dist from gitignore
+  [jchandelle]
 
 
 1.0.0a7 (2023-10-19)

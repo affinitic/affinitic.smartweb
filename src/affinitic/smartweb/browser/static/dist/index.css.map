@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":"AAAA,sEACE","sources":["webpack://affinitic.smartweb/./src/scss/main.scss"],"sourcesContent":["body.plone-toolbar-left #edit-zone #plone-smartweb-help-menu-workshop {\n  display: none;\n}"],"names":[],"sourceRoot":""}
