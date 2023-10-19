@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a9 (unreleased)
+1.0.0a9 (2023-10-19)
 --------------------
 
 - Fix Event and News container creation
