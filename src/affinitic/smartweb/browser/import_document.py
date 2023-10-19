@@ -123,6 +123,37 @@ class CustomImportDocumentContent(ImportContent):
 
         return obj, item
 
+    def get_parent_as_container(self, item):
+        folder = super(CustomImportDocumentContent, self).get_parent_as_container(item)
+        
+        if (
+            item["@type"] == "News Item"
+            or item["@type"] == "affinitic.smartweb.News"
+        ):
+            if not check_if_folder_exist(folder, "news", INewsFolder):
+                folder = api.content.create(
+                    container=folder,
+                    type="affinitic.smartweb.NewsFolder",
+                    title="News",
+                )
+            else:
+                folder = getattr(folder, "news", False)
+
+        if (
+            item["@type"] == "Event"
+            or item["@type"] == "affinitic.smartweb.Event"
+        ):
+            if not check_if_folder_exist(folder, "events", IEventFolder):
+                folder = api.content.create(
+                    container=folder,
+                    type="affinitic.smartweb.EventFolder",
+                    title="Events",
+                )
+            else:
+                folder = getattr(folder, "events", False)
+
+        return folder
+
     def create_container(self, item):
         folder = self.context
         parent_url = unquote(item["parent"]["@id"])
@@ -154,32 +185,6 @@ class CustomImportDocumentContent(ImportContent):
                 )
             else:
                 folder = folder[element]
-
-        if (
-            item["@type"] == "News Item"
-            or item["@type"] == "affinitic.smartweb.News"
-        ):
-            if not check_if_folder_exist(folder, "news", INewsFolder):
-                folder = api.content.create(
-                    container=folder,
-                    type="affinitic.smartweb.NewsFolder",
-                    title="News",
-                )
-            else:
-                folder = getattr(folder, "news", False)
-
-        if (
-            item["@type"] == "Event"
-            or item["@type"] == "affinitic.smartweb.Event"
-        ):
-            if not check_if_folder_exist(folder, "events", IEventFolder):
-                folder = api.content.create(
-                    container=folder,
-                    type="affinitic.smartweb.EventFolder",
-                    title="Events",
-                )
-            else:
-                folder = getattr(folder, "events", False)
 
         return folder
 

@@ -5,7 +5,8 @@ Changelog
 1.0.0a9 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix Event and News container creation
+  [jchandelelle]
 
 
 1.0.0a8 (2023-10-19)
