@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a7 (unreleased)
+1.0.0a7 (2023-10-19)
 --------------------
 
 - Add bundels and hide workshop button
