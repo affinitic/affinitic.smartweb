@@ -15,82 +15,82 @@ Changelog
   [jchandelle]
 
 - Change publish date location
-  [Julien]
+  [jchandelle]
 
 
 1.0.0a6 (2023-09-15)
 --------------------
 
 - Fix collection section view
-  [Julien]
+  [jchandelle]
 
 
 1.0.0a5 (2023-09-08)
 --------------------
 
 - Fix event and news default layout
-  [Julien]
+  [jchandelle]
 
 
 1.0.0a4 (2023-09-07)
 --------------------
 
 - Update and fix types
-  [Julien]
+  [jchandelle]
 
 - Fix adding new and event folder
-  [Julien]
+  [jchandelle]
 
 
 1.0.0a3 (2023-08-18)
 --------------------
 
 - Add ownership to event and news type
-  [Julien]
+  [jchandelle]
 
 
 1.0.0a2 (2023-08-18)
 --------------------
 
 - Modfiy Smartweb type behavior
-  [Julien]
+  [jchandelle]
 
 - Fix section duplication when reimporting data
-  [Julien]
+  [jchandelle]
 
 - Fix missing section files
-  [Julien]
+  [jchandelle]
 
 - Remove iam from types behavior
-  [Julien]
+  [jchandelle]
 
 - Fix for missing title and too long description
-  [Julien]
+  [jchandelle]
 
 
 1.0.0a1 (2023-04-25)
 --------------------
 
 - Locals
-  [Julien]
+  [jchandelle]
 
 - Add multilangual dependencies
-  [Julien]
+  [jchandelle]
 
 - Fix removing default folder
-  [Julien]
+  [jchandelle]
 
 - Add back portlet support
-  [Julien]
+  [jchandelle]
 
 - Add Event and News type
-  [Julien]
+  [jchandelle]
 
 - Remove CirkwiView type
-  [Julien]
+  [jchandelle]
 
 - Add custom hook for migration
-  [Julien]
+  [jchandelle]
 
 - Remove default dependencies from imio smartweb
   [Nicolas]
