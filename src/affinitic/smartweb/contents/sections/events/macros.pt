@@ -2,7 +2,9 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      lang="en">
+      lang="en"
+      i18n:domain="plone"
+      >
   <metal:macro define-macro="event_date">
     <tal:def tal:define="start event_date/start;
                          end event_date/end;
@@ -11,20 +13,20 @@
       <tal:if tal:condition="is_multi_dates">
           <div class="start_date">
               <span class="from_on" i18n:translate="">From</span>
-              <span class="day" tal:content="python:start.strftime('%d')">jour</span>
-              <span class="month" tal:content="python:start.strftime('%m')">mois</span>
+              <span class="day" tal:content="python:start.strftime('%d')" i18n:translate="">days</span>
+              <span class="month" tal:content="python:start.strftime('%m')" i18n:translate="">months</span>
          </div>
          <div class="end_date">
-             <span class="to" i18n:translate="">to</span>
-             <span class="day" tal:content="python:end.strftime('%d')">jour</span>
-             <span class="month" tal:content="python:end.strftime('%m')">mois</span>
+             <span class="to" i18n:translate="">To</span>
+             <span class="day" tal:content="python:end.strftime('%d')" i18n:translate="">days</span>
+             <span class="month" tal:content="python:end.strftime('%m')" i18n:translate="">months</span>
           </div>
       </tal:if>
       <tal:else tal:condition="not:is_multi_dates">
           <div class="day_date">
               <span class="from_on" i18n:translate="">On</span>
-              <span class="day" tal:content="python:start.strftime('%d')">jour</span>
-              <span class="month" tal:content="python:start.strftime('%m')">mois</span>
+              <span class="day" tal:content="python:start.strftime('%d')" i18n:translate="">days</span>
+              <span class="month" tal:content="python:start.strftime('%m')" i18n:translate="">months</span>
          </div>
       </tal:else>
     </tal:def>
