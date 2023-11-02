@@ -5,7 +5,17 @@ Changelog
 1.0.0a10 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Fix "/" in type declaration
+  [jchandelle]
+
+- Change i18n domain on types
+  [jchandelle]
+
+- Fix i18n for event macro
+  [jchandelle]
+
+- Fix i18n for see more button
+  [jchandelle]
 
 
 1.0.0a9 (2023-10-19)
