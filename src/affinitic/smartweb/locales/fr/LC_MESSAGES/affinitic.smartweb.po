@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"POT-Creation-Date: 2023-11-02 14:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,4 +12,175 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: affinitic.smartweb\n"
+
+#: ../contents/sections/event_infos/content.py:16
+msgid "Display Attendee"
+msgstr "Afficher les participants"
+
+#: ../contents/sections/event_infos/content.py:18
+msgid "Display Contact Mail"
+msgstr "Afficher le mail de contact"
+
+#: ../contents/sections/event_infos/content.py:20
+msgid "Display Contact Name"
+msgstr "Afficher le nom de contact"
+
+#: ../contents/sections/event_infos/content.py:23
+msgid "Display Contact Phone"
+msgstr "Afficher le numéros de téléphone de contact"
+
+#: ../contents/sections/event_infos/content.py:14
+msgid "Display End Date"
+msgstr "Afficher la date de fin"
+
+#: ../contents/sections/event_infos/content.py:26
+msgid "Display Lead Image"
+msgstr "Afficher l'image de garde"
+
+#: ../contents/sections/event_infos/content.py:28
+msgid "Display Location"
+msgstr "Afficher la localisation"
+
+#: ../contents/sections/event_infos/content.py:32
+msgid "Display Open End"
+msgstr "Afficher si il n'y a pas d'heure de fin"
+
+#: ../contents/sections/event_infos/content.py:34
+msgid "Display Recurence"
+msgstr "Afficher la récurence"
+
+#: ../contents/sections/event_infos/content.py:12
+msgid "Display Start Date"
+msgstr "Afficher la date de début"
+
+#: ../contents/sections/event_infos/content.py:30
+msgid "Display Whole Day"
+msgstr "Afficher si ca se déroule toute la journée"
+
+#: ../profiles/event_news/types/affinitic.smartweb.Event.xml
+msgid "Event"
+msgstr "Evenement"
+
+#: ../profiles/event_news/types/affinitic.smartweb.EventFolder.xml
+msgid "Event Folder"
+msgstr "Dossier d'évenement"
+
+#: ../profiles/event_news/types/affinitic.smartweb.EventFolder.xml
+msgid "Event Folder content type to structure website"
+msgstr "Type de contenu du dossier d'événements pour structurer le site Web"
+
+#: ../profiles/event_news/types/affinitic.smartweb.Event.xml
+msgid "Event Page content type to print event informations"
+msgstr "Type de contenu de la page d'événement pour afficher les informations sur l'événement"
+
+#: ../profiles/event_news/types/affinitic.smartweb.SectionEventInfo.xml
+msgid "Events Infos section"
+msgstr "Section Informations sur les événements"
+
+#: ../profiles/event_news/types/affinitic.smartweb.SectionEventInfo.xml
+msgid "Events info section for a event"
+msgstr "Section d'informations sur les événements pour un événement"
+
+#: ../profiles/event_news/types/affinitic.smartweb.SectionEvents.xml
+msgid "Events section"
+msgstr "Section événements"
+
+#: ../profiles/event_news/types/affinitic.smartweb.SectionEvents.xml
+msgid "Events section for a page"
+msgstr "Section événements pour une page"
+
+#: ../contents/sections/events/content.py:37
+msgid "Events view used to display events details"
+msgstr "Vue événements utilisée pour afficher les détails de l'événement"
+
+#: ../configure.zcml:32
+msgid "Installs Event and News types for smartweb"
+msgstr ""
+
+#: ../configure.zcml:41
+msgid "Installs back portlets for smartweb"
+msgstr ""
+
+#: ../configure.zcml:23
+msgid "Installs the affinitic.smartweb add-on."
+msgstr ""
+
+#: ../contents/sections/events/content.py:50
+#: ../contents/sections/news/content.py:35
+msgid "Maximum number of batches to display"
+msgstr "Nombre maximum de lots à afficher"
+
+#: ../profiles/event_news/types/affinitic.smartweb.NewsFolder.xml
+msgid "News Folder"
+msgstr "Dossier d'actualités"
+
+#: ../profiles/event_news/types/affinitic.smartweb.NewsFolder.xml
+msgid "News Folder content type to structure website"
+msgstr "Type de contenu du dossier Actualités pour structurer le site Web"
+
+#: ../profiles/event_news/types/affinitic.smartweb.News.xml
+msgid "News Item"
+msgstr "Actualité"
+
+#: ../profiles/event_news/types/affinitic.smartweb.News.xml
+msgid "News Page content type to print news informations"
+msgstr "Type de contenu de la page d'actualités pour afficher des informations d'actualité"
+
+#: ../profiles/event_news/types/affinitic.smartweb.SectionNews.xml
+msgid "News section"
+msgstr "Section actualités"
+
+#: ../profiles/event_news/types/affinitic.smartweb.SectionNews.xml
+msgid "News section for a page"
+msgstr "Section actualités pour une page"
+
+#: ../contents/sections/news/content.py:52
+msgid "News view used to display news items details"
+msgstr "Vue actualités utilisée pour afficher les détails de l'actualité"
+
+#: ../contents/sections/event_infos/view.py:25
+msgid "No"
+msgstr "Non"
+
+#: ../contents/sections/events/content.py:43
+#: ../contents/sections/news/content.py:28
+msgid "Number of items per batch"
+msgstr "Nombre d'éléments par lot"
+
+#: ../contents/sections/events/content.py:21
+msgid "See all events"
+msgstr "Voir tous les événements"
+
+#: ../contents/sections/news/content.py:21
+msgid "See all news"
+msgstr "Voir toutes les actualités"
+
+#: ../contents/sections/events/content.py:65
+#: ../contents/sections/news/content.py:65
+msgid "Show items description"
+msgstr "Afficher la description des éléments"
+
+#: ../contents/sections/events/content.py:58
+msgid "Text for the link to the events view"
+msgstr "Texte du lien vers la vue évévenements"
+
+#: ../contents/sections/news/content.py:58
+msgid "Text for the link to the news view"
+msgstr "Texte du lien vers la vue actualités"
+
+#: ../configure.zcml:50
+msgid "Uninstalls the affinitic.smartweb add-on."
+msgstr ""
+
+#: ../contents/sections/event_infos/view.py:24
+msgid "Yes"
+msgstr "Oui"
+
+#: ../configure.zcml:23
+msgid "affinitic.smartweb"
+msgstr ""
+
+#: ../configure.zcml:50
+msgid "affinitic.smartweb (uninstall)"
+msgstr ""

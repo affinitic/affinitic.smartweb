@@ -1,3 +1,6 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -12,7 +15,7 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: affinitic.smartweb\n"
+"Domain: plone\n"
 
 #: ../contents/sections/event_infos/content.py:16
 msgid "Display Attendee"
@@ -58,81 +61,13 @@ msgstr ""
 msgid "Display Whole Day"
 msgstr ""
 
-#: ../profiles/event_news/types/affinitic.smartweb.Event.xml
-msgid "Event"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.EventFolder.xml
-msgid "Event Folder"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.EventFolder.xml
-msgid "Event Folder content type to structure website"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.Event.xml
-msgid "Event Page content type to print event informations"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.SectionEventInfo.xml
-msgid "Events Infos section"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.SectionEventInfo.xml
-msgid "Events info section for a event"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.SectionEvents.xml
-msgid "Events section"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.SectionEvents.xml
-msgid "Events section for a page"
-msgstr ""
-
 #: ../contents/sections/events/content.py:37
 msgid "Events view used to display events details"
-msgstr ""
-
-#: ../configure.zcml:32
-msgid "Installs Event and News types for smartweb"
-msgstr ""
-
-#: ../configure.zcml:41
-msgid "Installs back portlets for smartweb"
-msgstr ""
-
-#: ../configure.zcml:23
-msgid "Installs the affinitic.smartweb add-on."
 msgstr ""
 
 #: ../contents/sections/events/content.py:50
 #: ../contents/sections/news/content.py:35
 msgid "Maximum number of batches to display"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.NewsFolder.xml
-msgid "News Folder"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.NewsFolder.xml
-msgid "News Folder content type to structure website"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.News.xml
-msgid "News Item"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.News.xml
-msgid "News Page content type to print news informations"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.SectionNews.xml
-msgid "News section"
-msgstr ""
-
-#: ../profiles/event_news/types/affinitic.smartweb.SectionNews.xml
-msgid "News section for a page"
 msgstr ""
 
 #: ../contents/sections/news/content.py:52
@@ -148,12 +83,22 @@ msgstr ""
 msgid "Number of items per batch"
 msgstr ""
 
+#: ../contents/sections/common_templates/carousel.pt:64
+#: ../contents/sections/common_templates/list.pt:71
+#: ../contents/sections/common_templates/table.pt:83
+msgid "Published"
+msgstr ""
+
 #: ../contents/sections/events/content.py:21
 msgid "See all events"
 msgstr ""
 
 #: ../contents/sections/news/content.py:21
 msgid "See all news"
+msgstr ""
+
+#: ../contents/sections/common_templates/list.pt:90
+msgid "See more"
 msgstr ""
 
 #: ../contents/sections/events/content.py:65
@@ -169,18 +114,6 @@ msgstr ""
 msgid "Text for the link to the news view"
 msgstr ""
 
-#: ../configure.zcml:50
-msgid "Uninstalls the affinitic.smartweb add-on."
-msgstr ""
-
 #: ../contents/sections/event_infos/view.py:24
 msgid "Yes"
-msgstr ""
-
-#: ../configure.zcml:23
-msgid "affinitic.smartweb"
-msgstr ""
-
-#: ../configure.zcml:50
-msgid "affinitic.smartweb (uninstall)"
 msgstr ""

@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2023-11-02 14:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+#: ../contents/sections/event_infos/content.py:16
+msgid "Display Attendee"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:18
+msgid "Display Contact Mail"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:20
+msgid "Display Contact Name"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:23
+msgid "Display Contact Phone"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:14
+msgid "Display End Date"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:26
+msgid "Display Lead Image"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:28
+msgid "Display Location"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:32
+msgid "Display Open End"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:34
+msgid "Display Recurence"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:12
+msgid "Display Start Date"
+msgstr ""
+
+#: ../contents/sections/event_infos/content.py:30
+msgid "Display Whole Day"
+msgstr ""
+
+#: ../contents/sections/events/content.py:37
+msgid "Events view used to display events details"
+msgstr ""
+
+#: ../contents/sections/events/content.py:50
+#: ../contents/sections/news/content.py:35
+msgid "Maximum number of batches to display"
+msgstr ""
+
+#: ../contents/sections/news/content.py:52
+msgid "News view used to display news items details"
+msgstr ""
+
+#: ../contents/sections/event_infos/view.py:25
+msgid "No"
+msgstr ""
+
+#: ../contents/sections/events/content.py:43
+#: ../contents/sections/news/content.py:28
+msgid "Number of items per batch"
+msgstr ""
+
+#: ../contents/sections/common_templates/carousel.pt:64
+#: ../contents/sections/common_templates/list.pt:71
+#: ../contents/sections/common_templates/table.pt:83
+msgid "Published"
+msgstr ""
+
+#: ../contents/sections/events/content.py:21
+msgid "See all events"
+msgstr ""
+
+#: ../contents/sections/news/content.py:21
+msgid "See all news"
+msgstr ""
+
+#: ../contents/sections/common_templates/list.pt:90
+msgid "See more"
+msgstr ""
+
+#: ../contents/sections/events/content.py:65
+#: ../contents/sections/news/content.py:65
+msgid "Show items description"
+msgstr ""
+
+#: ../contents/sections/events/content.py:58
+msgid "Text for the link to the events view"
+msgstr ""
+
+#: ../contents/sections/news/content.py:58
+msgid "Text for the link to the news view"
+msgstr ""
+
+#: ../contents/sections/event_infos/view.py:24
+msgid "Yes"
+msgstr ""
