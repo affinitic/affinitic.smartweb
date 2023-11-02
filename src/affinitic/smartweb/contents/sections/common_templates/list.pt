@@ -86,8 +86,8 @@
                     <a  tal:omit-tag="not: item/url"
                         tal:attributes="href item/url;
                                   target python:'_blank' if (open_in_new_tab and not can_edit_sections) else ''"
-                        i18n:translate="">
-                      See more
+                      >
+                      <span i18n:translate="">See more</span>
                       <img src="" tal:attributes="src string:${portal_url}/++plone++affinitic.smartweb/svg/arrow_left_circle.svg" alt="arrow left">
                     </a>
                   </div>
