@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a10 (unreleased)
+1.0.0a10 (2023-11-02)
 ---------------------
 
 - Fix "/" in type declaration
