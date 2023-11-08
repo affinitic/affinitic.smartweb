@@ -12,11 +12,4 @@
       provides=".image_scales.IImageScales"
       />
 
-  <plone:behavior
-      name="affinitic.smartweb.int_nb_result_by_batches"
-      title="Int nb_result_by_batches"
-      description="Change nb_result_by_batches field to int."
-      provides=".nb_result_by_batches.IIntNbResultsByBatch"
-      />
-
 </configure>

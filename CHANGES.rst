@@ -5,6 +5,9 @@ Changelog
 1.0.0a11 (unreleased)
 ---------------------
 
+- Fix Remove unfinished behavior from configure
+  [jchandelle]
+
 - Add behavior to section to select a image scale
   [jchandelelle]
 
