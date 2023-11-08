@@ -5,7 +5,8 @@ Changelog
 1.0.0a11 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Add behavior to section to select a image scale
+  [jchandelelle]
 
 
 1.0.0a10 (2023-11-02)

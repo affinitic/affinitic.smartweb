@@ -29,6 +29,7 @@
     <element value="plone.locking"/>
     <element value="plone.shortname"/>
     <element value="plone.imagecropping"/>
+    <element value="affinitic.smartweb.image_scales"/>
   </property>
 
   <!-- View information -->

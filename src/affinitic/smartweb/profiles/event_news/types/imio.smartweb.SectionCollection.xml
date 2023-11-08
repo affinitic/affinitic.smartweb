@@ -6,6 +6,10 @@
 
   <!-- Basic properties -->
  
+  <property name="behaviors" purge="false">
+    <element value="affinitic.smartweb.image_scales"/>
+  </property>
+
   <property name="view_methods">
     <element value="carousel_view"/>
     <element value="table_view"/>

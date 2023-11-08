@@ -51,4 +51,13 @@
     handler=".upgrades.update_types_event_news"
     />
 
+  <genericsetup:upgradeStep
+    source="1002"
+    destination="1003"
+    title="Add new view to section collection, news and event"
+    description=""
+    profile="affinitic.smartweb:Event and News Types"
+    handler=".upgrades.update_types_event_news"
+    />
+
 </configure>

@@ -1,0 +1,22 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  i18n_domain="affinitic.smartweb">
+
+  <include package="plone.behavior" file="meta.zcml"/>
+
+  <plone:behavior
+      name="affinitic.smartweb.image_scales"
+      title="Image Scales"
+      description="Allow to choose images scales for current context."
+      provides=".image_scales.IImageScales"
+      />
+
+  <plone:behavior
+      name="affinitic.smartweb.int_nb_result_by_batches"
+      title="Int nb_result_by_batches"
+      description="Change nb_result_by_batches field to int."
+      provides=".nb_result_by_batches.IIntNbResultsByBatch"
+      />
+
+</configure>
