@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a11 (unreleased)
+1.0.0a11 (2023-11-08)
 ---------------------
 
 - Fix Remove unfinished behavior from configure
