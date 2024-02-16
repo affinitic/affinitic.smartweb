@@ -5,7 +5,8 @@ Changelog
 1.0.0a12 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Allow news and events sections in portal page
+  [laulaz]
 
 
 1.0.0a11 (2023-11-08)
