@@ -11,7 +11,7 @@ from six.moves.urllib.parse import unquote
 from six.moves.urllib.parse import urlparse
 
 import logging
-
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -58,6 +58,54 @@ class CustomImportDocumentContent(ImportContent):
     def dict_hook_newsitem(self, item):
         item["@type"] = "affinitic.smartweb.News"
         item["layout"] = "full_view"
+        return item
+
+    def _remove_localhost(self, path, plone=True):
+        if plone:
+            return path.replace("http://localhost:8080/Plone", "")
+        return path.replace("http://localhost:8080", "")
+
+    def _path_to_uid(self, path):
+        obj = api.content.get(path=self._remove_localhost(path, False))
+        if not obj:
+            return None, self._remove_localhost(path)
+        return obj.UID(), None
+
+    def _handle_link(self, item):
+        text = item.get("text", None)
+        if not text:
+            return item
+        data = text.get("data", None)
+        if not data:
+            return item
+        item["text"]["data"] = re.sub(r'(https?:\/\/localhost\:8080\/Plone)', "", data)
+        return item
+
+    def dict_hook_publication(self, item):
+        ref_ebook = item.get('ref_ebook', None)
+        ref_pdf = item.get('ref_pdf', None)
+        errors = []
+        if ref_ebook:
+            item['ref_ebook'], error = self._path_to_uid(ref_ebook)
+            if error:
+                errors.append(error)
+        if ref_pdf:
+            item['ref_pdf'], error = self._path_to_uid(ref_pdf)
+            if error:
+                errors.append(error)
+
+        if len(errors) > 0:
+            msg = f"Error : Cannot find {' and '.join(errors)}"
+
+            description = item.get("description", None)
+            logger.warning("{} : {}".format(item['@id'], msg))
+            if description:
+                item['description'] = f"{msg} - {description}"
+            else:
+                item['description'] = f"{msg}"
+
+        item = self._handle_link(item)
+
         return item
 
     def _create_text_section(self, text, title, container):

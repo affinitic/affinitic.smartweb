@@ -5,7 +5,8 @@ Changelog
 1.0.0a13 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Add hook for publication import
+  [jchandelle]
 
 
 1.0.0a12 (2024-02-19)
