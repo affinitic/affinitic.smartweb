@@ -19,5 +19,6 @@
 
   <property name="behaviors" purge="false">
     <element value="plone.ownership"/>
+    <element value="plone.translatable"/>
   </property>
 </object>

@@ -34,5 +34,6 @@
     <element value="plone.categorization"/>
     <element value="collective.autopublishing.behavior.IAutoPublishing"/>
     <element value="plone.ownership"/>
+    <element value="plone.translatable"/>
   </property>
 </object>
