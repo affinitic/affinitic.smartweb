@@ -16,7 +16,7 @@ long_description = "\n\n".join(
 
 setup(
     name="affinitic.smartweb",
-    version="1.0.0a12",
+    version="1.0.0a13.dev0",
     description="An agnostic version of IMIO Smartweb",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
