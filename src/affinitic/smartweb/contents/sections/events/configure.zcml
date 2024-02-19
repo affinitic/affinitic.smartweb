@@ -36,6 +36,17 @@
       />
 
   <browser:page
+      name="mini_list_view"
+      for="affinitic.smartweb.contents.ISectionEvents"
+      class="affinitic.smartweb.contents.sections.events.view.AffiniticEventsView"
+      template="../common_templates/mini-list.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="Mini List view"
+      />
+
+  <browser:page
       for="affinitic.smartweb.contents.ISectionEvents"
       name="macros"
       template="macros.pt"

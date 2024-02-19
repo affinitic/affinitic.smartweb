@@ -5,6 +5,9 @@ Changelog
 1.0.0a13 (unreleased)
 ---------------------
 
+- Add mini-list template for section
+  [jchandelle]
+
 - Add hook for publication import
   [jchandelle]
 

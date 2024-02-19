@@ -40,6 +40,7 @@
     <element value="carousel_view"/>
     <element value="table_view"/>
     <element value="list_view"/>
+    <element value="mini_list_view"/>
   </property>
 
 </object>

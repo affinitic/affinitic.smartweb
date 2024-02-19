@@ -13,4 +13,15 @@
       title="List view"
       />
 
+    <browser:page
+      name="mini_list_view"
+      for="imio.smartweb.core.contents.ISectionCollection"
+      class="imio.smartweb.core.contents.sections.collection.views.CollectionView"
+      template="../common_templates/mini-list.pt"
+      permission="zope2.View"
+      layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
+      menu="plone_displayviews"
+      title="Mini List view"
+      />
+
 </configure>
