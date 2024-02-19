@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="LRF"
+        i18n:domain="plone"
+>
+  <property name="filter_content_types">True</property>
+  <property name="allowed_content_types" purge="false">
+    <element value="affinitic.smartweb.EventFolder" />
+    <element value="affinitic.smartweb.NewsFolder" />
+  </property>
+</object>

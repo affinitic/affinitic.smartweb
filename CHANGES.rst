@@ -5,6 +5,9 @@ Changelog
 1.0.0a12 (unreleased)
 ---------------------
 
+- Add allowed_content_types to LRF
+  [jchandelle]
+
 - Add plone.translatable behavior to default smartweb type
   [jchandelle]
 

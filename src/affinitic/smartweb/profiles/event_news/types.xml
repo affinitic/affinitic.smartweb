@@ -9,4 +9,5 @@
   <object meta_type="Dexterity FTI" name="affinitic.smartweb.SectionNews"/>
   <object meta_type="Dexterity FTI" name="imio.smartweb.Page"/>
   <object meta_type="Dexterity FTI" name="imio.smartweb.SectionCollection"/>
+  <object meta_type="Dexterity FTI" name="LRF"/>
 </object>
