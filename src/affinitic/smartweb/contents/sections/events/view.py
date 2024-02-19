@@ -6,7 +6,6 @@ from dateutil.parser import parse
 from imio.smartweb.core.config import EVENTS_URL
 from imio.smartweb.core.contents.sections.events.view import EventsView
 from imio.smartweb.core.utils import batch_results
-from imio.smartweb.core.utils import get_json
 
 import pytz
 

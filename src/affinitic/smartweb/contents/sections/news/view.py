@@ -2,7 +2,6 @@ from Products.CMFPlone.utils import normalizeString
 from imio.smartweb.core.config import NEWS_URL
 from imio.smartweb.core.contents.sections.news.view import NewsView
 from imio.smartweb.core.utils import batch_results
-from imio.smartweb.core.utils import get_json
 from plone import api
 
 

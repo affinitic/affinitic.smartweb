@@ -10,7 +10,7 @@ from zope.interface import provider
 
 @provider(IFormFieldProvider)
 class IImageScales(model.Schema):
-    
+
     model.fieldset("settings", fields=["image_scale"])
     image_scale = schema.Choice(
         title=_("Image scale for images (only for gallery mode)"),

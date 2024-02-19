@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 
-from affinitic.smartweb.utils import check_if_folder_exist
 from affinitic.smartweb.contents import IEventFolder
 from affinitic.smartweb.contents import INewsFolder
+from affinitic.smartweb.utils import check_if_folder_exist
 from collective.exportimport.import_content import ImportContent
-from os.path import join
 from plone import api
 from plone.app.textfield.value import RichTextValue
+from plone.i18n.normalizer import idnormalizer
 from six.moves.urllib.parse import unquote
 from six.moves.urllib.parse import urlparse
-from plone.i18n.normalizer import idnormalizer
 
 import logging
 
@@ -97,10 +96,10 @@ class CustomImportDocumentContent(ImportContent):
             or not item["title"]
             or item["title"].replace(" ", "") == ""
         ):
-            item["title"] = item['id']
+            item["title"] = item["id"]
             logger.warning(
                 "{} does not have a title, we take the id ({}) instead".format(
-                    item['@id'], item['id']
+                    item["@id"], item["id"]
                 )
             )
 
@@ -108,7 +107,7 @@ class CustomImportDocumentContent(ImportContent):
             item["description"] = item["description"][:699]
             logger.warning(
                 "{} have a descritpion to long, we trim it to 700 characters".format(
-                    item['@id'], item['id']
+                    item["@id"], item["id"]
                 )
             )
 
@@ -130,11 +129,8 @@ class CustomImportDocumentContent(ImportContent):
 
     def get_parent_as_container(self, item):
         folder = super(CustomImportDocumentContent, self).get_parent_as_container(item)
-        
-        if (
-            item["@type"] == "News Item"
-            or item["@type"] == "affinitic.smartweb.News"
-        ):
+
+        if item["@type"] == "News Item" or item["@type"] == "affinitic.smartweb.News":
             if not check_if_folder_exist(folder, "news", INewsFolder):
                 folder = api.content.create(
                     container=folder,
@@ -144,10 +140,7 @@ class CustomImportDocumentContent(ImportContent):
             else:
                 folder = getattr(folder, "news", False)
 
-        if (
-            item["@type"] == "Event"
-            or item["@type"] == "affinitic.smartweb.Event"
-        ):
+        if item["@type"] == "Event" or item["@type"] == "affinitic.smartweb.Event":
             if not check_if_folder_exist(folder, "events", IEventFolder):
                 folder = api.content.create(
                     container=folder,

@@ -2,7 +2,6 @@
 
 from Acquisition import aq_parent
 from affinitic.smartweb import _
-from datetime import datetime
 from imio.smartweb.core.contents.sections.views import SectionView
 from plone import api
 from plone.restapi.types.utils import get_info_for_type
