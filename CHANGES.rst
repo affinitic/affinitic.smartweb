@@ -5,6 +5,9 @@ Changelog
 1.0.0a13 (unreleased)
 ---------------------
 
+- Add plone.footer viewlet
+  [jchandelle]
+
 - Add mini-list template for section
   [jchandelle]
 
