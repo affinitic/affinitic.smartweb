@@ -5,6 +5,9 @@ Changelog
 1.0.0a12 (unreleased)
 ---------------------
 
+- Add hook for collage in import document
+  [jchandelle]
+
 - Allow news and events sections in portal page
   [laulaz]
 

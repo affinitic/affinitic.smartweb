@@ -41,6 +41,11 @@ class CustomImportDocumentContent(ImportContent):
         item["layout"] = "full_view"
         return item
 
+    def dict_hook_collage(self, item):
+        item["@type"] = "imio.smartweb.Page"
+        item["layout"] = "full_view"
+        return item
+
     def dict_hook_folder(self, item):
         item["@type"] = "imio.smartweb.Folder"
         item["layout"] = "block_view"
