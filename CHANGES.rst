@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a12 (unreleased)
+1.0.0a12 (2024-02-19)
 ---------------------
 
 - Add allowed_content_types to LRF
