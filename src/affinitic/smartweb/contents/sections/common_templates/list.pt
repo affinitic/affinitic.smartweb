@@ -43,14 +43,20 @@
                                portal context/@@plone_portal_state/portal;
                                open_in_new_tab item/open_in_new_tab | nothing;">
                 <div class="image-wrapper">
-                  <div class="item-image"
-                        tal:condition="python: item_has_image and show_lead_image"
-                        tal:attributes="style string:background-image:url(${item/image})">
-                  </div>
-                  <div class="item-image"
-                        tal:condition="python: not item_has_image and show_lead_image">
-                  
-                  </div>
+                  <a href="" class="links"
+                    tal:omit-tag="not: item/url"
+                    tal:attributes="href item/url;
+                      target python:'_blank' if (open_in_new_tab and not can_edit_sections) else ''"
+                  >
+                    <div class="item-image"
+                          tal:condition="python: item_has_image and show_lead_image"
+                          tal:attributes="style string:background-image:url(${item/image})">
+                    </div>
+                    <div class="item-image"
+                          tal:condition="python: not item_has_image and show_lead_image">
+                    
+                    </div>
+                  </a>
                 </div>
                 <div class="text-wrapper">
                   <div class="item_category"
@@ -59,7 +65,13 @@
                   </div>
 
                   <div class="item_title">
-                    <h3 tal:content="item/title"></h3>
+                    <a href="" class="link"
+                      tal:omit-tag="not: item/url"
+                      tal:attributes="href item/url;
+                        target python:'_blank' if (open_in_new_tab and not can_edit_sections) else ''"
+                    >
+                      <h3 tal:content="item/title"></h3>
+                    </a>
                   </div>
                   <div tal:condition="item/subtitle | nothing"
                         class="item_subtitle">

@@ -5,6 +5,9 @@ Changelog
 1.0.0a12 (unreleased)
 ---------------------
 
+- Add links to item title and image in list template section
+  [jchandelle]
+
 - Add hook for collage in import document
   [jchandelle]
 
