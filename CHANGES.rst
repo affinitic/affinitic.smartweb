@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a13 (unreleased)
+1.0.0a13 (2024-02-20)
 ---------------------
 
 - Add links to item title and image in mini-list template section
