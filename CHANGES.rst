@@ -5,6 +5,9 @@ Changelog
 1.0.0a13 (unreleased)
 ---------------------
 
+- Add links to item title and image in mini-list template section
+  [jchandelle]
+
 - Add plone.footer viewlet
   [jchandelle]
 
