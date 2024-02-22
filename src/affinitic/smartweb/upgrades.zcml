@@ -60,4 +60,13 @@
     handler=".upgrades.update_types_event_news"
     />
 
+  <genericsetup:upgradeStep
+    source="1003"
+    destination="1004"
+    title="Rmove behavior from event and news"
+    description=""
+    profile="affinitic.smartweb:Event and News Types"
+    handler=".upgrades.update_types_event_news"
+    />
+
 </configure>

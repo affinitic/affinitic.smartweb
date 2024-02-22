@@ -5,7 +5,8 @@ Changelog
 1.0.0a14 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Remove contact content from news and event
+  [jchandelle]
 
 
 1.0.0a13 (2024-02-20)
