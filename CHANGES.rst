@@ -5,6 +5,9 @@ Changelog
 1.0.0a14 (unreleased)
 ---------------------
 
+- Adjust some style
+  [jchandelle]
+
 - Add image portlet
   [jchandelle]
 
