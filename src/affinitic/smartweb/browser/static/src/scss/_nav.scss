@@ -1,0 +1,23 @@
+#portal-globalnav {
+  li.has_subtree{
+    &:hover>.dropdown{
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  li.has_subtree{
+    .dropdown a {
+      pointer-events: auto;
+    }
+
+    li.has_subtree {
+      .dropdown {
+        position: absolute;
+        top: 0;
+        left: 100%;
+      }
+    }
+  } 
+}

@@ -5,6 +5,9 @@ Changelog
 1.0.0a14 (unreleased)
 ---------------------
 
+- Change opening style of nav bar to hover
+  [jchandelle]
+
 - Adjust some style
   [jchandelle]
 

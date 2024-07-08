@@ -31,6 +31,15 @@
     handler=".upgrades.update_registry"
     />
 
+  <genericsetup:upgradeStep
+    source="1003"
+    destination="1004"
+    title="Add js compilation in bundles"
+    description=""
+    profile="affinitic.smartweb:default"
+    handler=".upgrades.update_registry"
+    />
+
 <!-- Event and News Types  -->
 
   <genericsetup:upgradeStep
