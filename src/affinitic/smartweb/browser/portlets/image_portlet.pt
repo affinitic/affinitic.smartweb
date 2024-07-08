@@ -1,0 +1,29 @@
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  tal:omit-tag=""
+>
+  <div class="card portlet" i18n:domain="my-example">
+    <div class="card-header" tal:condition="view/portlet_title" tal:content="view/portlet_title">Title</div>
+
+    <div class="card-body" tal:define="image view/image" tal:condition="view/image">
+      <tal:if tal:condition="python: not view.url()">
+        <img src="" alt="" tal:attributes="
+          src string:${context/absolute_url}/${view/portlet_context}/@@display-file/image/${image/filename};
+          height picture/_height | nothing;
+          width picture/_width | nothing;
+          alt view/portlet_title"/>
+      </tal:if>
+      <tal:if tal:condition="python: view.url()">
+        <a href="" tal:attributes="href view/url">
+          <img src="" alt="" tal:attributes="
+            src string:${context/absolute_url}/${view/portlet_context}/@@display-file/image/${image/filename};
+            height picture/_height | nothing;
+            width picture/_width | nothing;
+            alt view/portlet_title"/>
+        </a>
+      </tal:if>
+    </div>
+  </div>
+</html>

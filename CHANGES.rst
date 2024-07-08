@@ -5,6 +5,9 @@ Changelog
 1.0.0a14 (unreleased)
 ---------------------
 
+- Add image portlet
+  [jchandelle]
+
 - Remove contact content from news and event
   [jchandelle]
 

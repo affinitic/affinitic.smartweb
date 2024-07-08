@@ -31,3 +31,13 @@ def update_types_event_news(context):
     portal_setup.runImportStepFromProfile(
         "profile-affinitic.smartweb:Event and News Types", "typeinfo"
     )
+
+
+def update_portlet(context):
+    """
+    Update portlet
+    """
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runImportStepFromProfile(
+        "profile-affinitic.smartweb:Add Portlet", "portlets"
+    )

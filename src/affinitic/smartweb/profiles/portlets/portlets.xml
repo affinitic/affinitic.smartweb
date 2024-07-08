@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<portlets>
+  <portlet
+    addview="affinitic.smartweb.image_portlet"
+    title="Image"
+    />
+</portlets>

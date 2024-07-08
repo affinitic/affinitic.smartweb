@@ -11,6 +11,8 @@
     layer="affinitic.smartweb.interfaces.IAffiniticSmartwebLayer"
     />
 
+  <include package=".portlets"/>
+
   <!-- Publish static files -->
   <plone:static
     name="affinitic.smartweb"

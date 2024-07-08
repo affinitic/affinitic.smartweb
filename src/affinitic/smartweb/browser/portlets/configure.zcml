@@ -1,0 +1,19 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:plone='http://namespaces.plone.org/plone'
+  i18n_domain='affinitic.smartweb'>
+    
+    <include package="plone.app.portlets" />
+
+
+    <plone:portlet
+      name="affinitic.smartweb.image_portlet"
+      addview=".image_portlet.AddForm"
+      editview=".image_portlet.EditForm"
+      assignment=".image_portlet.Assignment"
+      renderer=".image_portlet.Renderer"
+      interface=".image_portlet.IImagePortlet"
+  />
+
+</configure>
