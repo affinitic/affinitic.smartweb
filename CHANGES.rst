@@ -5,6 +5,9 @@ Changelog
 1.0.0a14 (unreleased)
 ---------------------
 
+- Add image cropping behavior to Section Slide
+  [jchandelle]
+
 - Change opening style of nav bar to hover
   [jchandelle]
 

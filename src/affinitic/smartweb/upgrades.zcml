@@ -40,6 +40,15 @@
     handler=".upgrades.update_registry"
     />
 
+  <genericsetup:upgradeStep
+    source="1004"
+    destination="1005"
+    title="Add behavior in type"
+    description=""
+    profile="affinitic.smartweb:default"
+    handler=".upgrades.update_types"
+    />
+
 <!-- Event and News Types  -->
 
   <genericsetup:upgradeStep
