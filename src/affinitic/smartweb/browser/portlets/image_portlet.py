@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from novac.theme import _
+from affinitic.smartweb import _
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile

@@ -5,7 +5,8 @@ Changelog
 1.0.0a15 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Fix import
+  [jchandelle]
 
 
 1.0.0a14 (2024-07-09)
