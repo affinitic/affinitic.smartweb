@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a14 (unreleased)
+1.0.0a14 (2024-07-09)
 ---------------------
 
 - Add image cropping behavior to Section Slide
