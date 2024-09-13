@@ -59,9 +59,9 @@
                   </a>
                 </div>
                 <div class="text-wrapper">
-                  <div class="item_category"
+                  <div class="item_categories"
                         tal:condition="item/category | nothing">
-                    <span tal:content="item/category" />
+                    <span class="category" tal:repeat="category item/category" tal:content="category" />
                   </div>
 
                   <div class="item_title">

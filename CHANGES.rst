@@ -5,6 +5,9 @@ Changelog
 1.0.0a16 (unreleased)
 ---------------------
 
+- Fix category display
+  [jchandelle]
+
 - Fix section multi column
   [jchandelle]
 

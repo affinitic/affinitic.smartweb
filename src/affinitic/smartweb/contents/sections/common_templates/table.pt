@@ -74,7 +74,7 @@
 
                         <div class="table_category"
                              tal:condition="item/category | nothing">
-                          <span tal:content="item/category" />
+                          <span class="category" tal:repeat="category item/category" tal:content="category" />
                         </div>
 
                         <div class="table_date"
