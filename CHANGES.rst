@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a16 (unreleased)
+1.0.0a16 (2024-09-13)
 ---------------------
 
 - Fix collection seach display
