@@ -5,6 +5,9 @@ Changelog
 1.0.0a16 (unreleased)
 ---------------------
 
+- Fix section multi column
+  [jchandelle]
+
 - Fix date display
   [jchandelle]
 

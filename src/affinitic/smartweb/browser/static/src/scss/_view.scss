@@ -117,3 +117,23 @@ body{
 #portal-globalnav-collapse .nav_index_html, #subsite-navigation .nav_index_html {
 	display: none;
 }
+
+@media (min-width: 576px) {
+  .row {
+    .col-sm-3 {
+      width : calc(25% - 32px);
+    }
+    .col-sm-4 {
+      width : calc(33.33333% - 32px);
+    }
+    .col-sm-8 {
+      width : calc(66.66666% - 32px);
+    }
+    .col-sm-6 {
+      width : calc(50% - 32px);
+    }
+    .col-sm-9 {
+      width : calc(75% - 32px);
+    }
+  }
+}
