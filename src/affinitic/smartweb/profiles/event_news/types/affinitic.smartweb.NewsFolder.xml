@@ -12,7 +12,7 @@
       i18n:translate=""
       name="description">News Folder content type to structure website</property>
 
-  <property name="icon_expr">string:file-earmark</property>
+  <property name="icon_expr">string:folder2</property>
 
   <!-- Hierarchy control -->
   <property name="global_allow">True</property>

@@ -5,7 +5,8 @@ Changelog
 1.0.0a16 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Change event and news folder icon
+  [jchandelle]
 
 
 1.0.0a15 (2024-07-09)
