@@ -5,6 +5,9 @@ Changelog
 1.0.0a16 (unreleased)
 ---------------------
 
+- Fix date display
+  [jchandelle]
+
 - Change event and news folder icon
   [jchandelle]
 
