@@ -5,6 +5,9 @@ Changelog
 1.0.0a16 (unreleased)
 ---------------------
 
+- Fix collection seach display
+  [jchandelle]
+
 - Fix category display
   [jchandelle]
 
