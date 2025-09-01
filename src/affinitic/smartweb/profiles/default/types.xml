@@ -7,5 +7,6 @@
   <object meta_type="Dexterity FTI" name="imio.smartweb.Procedure"/>
   <object meta_type="Dexterity FTI" name="imio.smartweb.PortalPage"/>
   <object meta_type="Dexterity FTI" name="imio.smartweb.Page"/>
+  <object meta_type="Dexterity FTI" name="affinitic.smartweb.SectionCopyLink"/>
   <object meta_type="Dexterity FTI" name="LRF"/>
 </object>

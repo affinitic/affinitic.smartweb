@@ -5,3 +5,4 @@ from .pages.news.content import INews, News  # NOQA
 from .sections.event_infos.content import ISectionEventInfos, SectionEventInfos # NOQA
 from .sections.events.content import ISectionEvents, SectionEvents # NOQA
 from .sections.news.content import ISectionNews, SectionNews # NOQA
+from .sections.section_copy_link.content import ISectionCopyLink, SectionCopyLink # NOQA

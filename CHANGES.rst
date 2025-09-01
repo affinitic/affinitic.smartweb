@@ -5,7 +5,8 @@ Changelog
 1.0.0a17 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Add new section to copy visual from another section
+  [jchandelle]
 
 
 1.0.0a16 (2024-09-13)

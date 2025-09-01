@@ -5,5 +5,6 @@
   <include package=".events" />
   <include package=".news" />
   <include package=".collection" />
+  <include package=".section_copy_link" />
 
 </configure>

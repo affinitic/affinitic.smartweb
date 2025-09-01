@@ -16,6 +16,7 @@
     <element value="imio.smartweb.SectionSelections" />
     <element value="imio.smartweb.SectionText" />
     <element value="imio.smartweb.SectionVideo" />
+    <element value="affinitic.smartweb.SectionCopyLink" />
   </property>
 
    <!-- Enabled behaviors -->

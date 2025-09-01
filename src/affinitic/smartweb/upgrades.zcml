@@ -49,6 +49,15 @@
     handler=".upgrades.update_types"
     />
 
+  <genericsetup:upgradeStep
+    source="1005"
+    destination="1006"
+    title="Add new section"
+    description=""
+    profile="affinitic.smartweb:default"
+    handler=".upgrades.update_types"
+    />
+
 <!-- Event and News Types  -->
 
   <genericsetup:upgradeStep
