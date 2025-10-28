@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from Acquisition import aq_parent
 from affinitic.smartweb.contents import IEventFolder
 from affinitic.smartweb.contents import INewsFolder
 from affinitic.smartweb.utils import check_if_folder_exist
@@ -12,6 +13,7 @@ from six.moves.urllib.parse import urlparse
 
 import logging
 import re
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -42,6 +44,7 @@ class CustomImportDocumentContent(ImportContent):
 
     def dict_hook_collage(self, item):
         item["@type"] = "imio.smartweb.Page"
+        item["old_type"] = "Collage"
         item["layout"] = "full_view"
         return item
 
@@ -58,6 +61,11 @@ class CustomImportDocumentContent(ImportContent):
     def dict_hook_newsitem(self, item):
         item["@type"] = "affinitic.smartweb.News"
         item["layout"] = "full_view"
+        return item
+
+    def dict_hook_topic(self, item):
+        item["@type"] = "Collection"
+        item["layout"] = "view"
         return item
 
     def _remove_localhost(self, path, plone=True):
@@ -108,6 +116,112 @@ class CustomImportDocumentContent(ImportContent):
 
         return item
 
+    def _add_subfolder_in_path(self, path, subfolder, position=-1):
+        path_split = path.split("/")
+        path_split.insert(position, subfolder)
+        return "/".join(path_split)
+
+    def handle_collage_document(self, obj, collage):
+        target = collage.get("target", None)
+        if target is None:
+            return
+
+        if collage["target_type"] == "News Item":
+            target = self._add_subfolder_in_path(target, "news")
+
+        # safer path lookup
+        site = api.portal.get()
+        target_obj = site.unrestrictedTraverse(target.lstrip("/"), None)
+        if target_obj is None:
+            logger.warning(f"Target not found for collage: {target}")
+            return
+
+        sections = target_obj.listFolderContents()
+        if not sections:
+            logger.info(f"No sections found in target {target}")
+            return
+
+        for section in sections:
+            # copy via Zope API instead of api.content.copy
+            cp = target_obj.manage_copyObjects(ids=[section.getId()])
+            result = obj.manage_pasteObjects(cp)
+
+            if result:
+                new_id = result[0]['new_id']
+                logger.info(
+                    "Section %s (%s) copied into %s as %s",
+                    section.id,
+                    section.portal_type,
+                    "/".join(obj.getPhysicalPath()),
+                    new_id,
+                )
+            else:
+                logger.warning(
+                    "Failed to paste section %s into %s",
+                    section.id,
+                    "/".join(obj.getPhysicalPath()),
+                )
+
+    def handle_collage_image(self, obj, collage):
+        target = collage.get("target", None)
+        id = collage["id"]
+        if target is not None:
+            id = target.split("/")[-1]
+        api.content.create(
+            container=obj,
+            type="imio.smartweb.SectionGallery",
+            id=id
+        )
+
+    def handle_collage_topic(self, obj, collage):
+        target = collage.get("target", None)
+        if target is None:
+            return
+        section = api.content.create(
+            container=obj,
+            type="imio.smartweb.SectionCollection",
+            title=collage["title"]
+        )
+        target_obj = api.content.get(path=target)
+        if target_obj and target_obj.portal_type == "Collection":
+            section.collection = target_obj
+
+    def handle_collage_news(self, obj, collage):
+        target = collage.get("target", None)
+        id = collage["id"]
+        if target is not None:
+            id = target.split("/")[-1]
+        section = api.content.create(
+            container=obj,
+            type="affinitic.smartweb.SectionNews",
+            title=collage["title"]
+        )
+        target_obj = api.content.get(path=target)
+        if target_obj and target_obj.portal_type == "Collection":
+            section.collection = target_obj
+
+    def handle_collage(self, obj, item):
+        collages = item.get("collages", None)
+        if collages is None:
+            return
+        for collage in collages:
+            target_type = collage.get("target_type", None)
+            if not target_type:
+                continue
+            adpater = {
+                "Document": self.handle_collage_document,
+                "Image": self.handle_collage_image,
+                "Topic": self.handle_collage_topic,
+                "News Item": self.handle_collage_document
+            }
+            adpater[collage["target_type"]](obj, collage)
+
+    def global_obj_hook(self, obj, item):
+        old_type = item.get("old_type", None)
+        if old_type and old_type == "Collage":
+            self.handle_collage(obj, item)
+        return obj
+
     def _create_text_section(self, text, title, container):
         if idnormalizer.normalize(title) in container:
             return
@@ -134,6 +248,50 @@ class CustomImportDocumentContent(ImportContent):
             id=id,
             hide_title=True,
         )
+
+    def _create_file_section(self, id, container):
+        if id in container:
+            return
+
+        section = api.content.create(
+            container=container,
+            type="imio.smartweb.SectionFiles",
+            id=id,
+            hide_title=True,
+        )
+        return section
+
+    def _add_file_to_section(self, section_obj, section_info, context_path):
+
+        file_path = section_info["href"]
+        if not file_path.startswith("/Plone/"):
+            file_path = os.path.normpath(os.path.join(context_path, file_path))
+        file_obj = api.content.get(path=file_path)
+        if not file_obj:
+            return
+        cp = aq_parent(file_obj).manage_copyObjects(ids=[file_obj.getId()])
+        result = section_obj.manage_pasteObjects(cp)
+
+        if result:
+            new_id = result[0]['new_id']
+            logger.info(
+                "File %s (%s) copied into %s as %s",
+                file_obj.id,
+                file_obj.portal_type,
+                "/".join(section_obj.getPhysicalPath()),
+                new_id,
+            )
+        else:
+            logger.warning(
+                "Failed to paste File %s into %s",
+                file_obj.id,
+                "/".join(section_obj.getPhysicalPath()),
+            )
+
+    def _get_gallery_id(self, section):
+        if "id" in section:
+            return section["id"].replace(".", "-")
+        return "_".join(section["merge_data"]).replace(".", "-")
 
     def global_obj_hook_before_deserializing(self, obj, item):
         """Hook to modify the created obj before deserializing the data."""
@@ -171,7 +329,17 @@ class CustomImportDocumentContent(ImportContent):
                 )
 
             if section["type"] == "image":
-                self._create_gallery_section(id=section.get("id"), container=obj)
+                self._create_gallery_section(
+                    id=self._get_gallery_id(section), container=obj
+                )
+
+            if section["type"] == "link":
+                section_obj = self._create_file_section(
+                    id=os.path.basename(section["href"]), container=obj
+                )
+                self._add_file_to_section(
+                    section_obj, section, "/".join(obj.getPhysicalPath())
+                )
 
         return obj, item
 
@@ -234,7 +402,26 @@ class CustomImportDocumentContent(ImportContent):
 
         return folder
 
-    def handle_image_container(self, item):
+    def handle_image_container_multi(self, path):
+        basename = os.path.basename(path)
+        dirname = os.path.dirname(path)
+        page = api.content.get(path=dirname)
+        if not page:
+            return None
+        galleries_sections = page.listFolderContents(
+            contentFilter={"portal_type": "imio.smartweb.SectionGallery"}
+        )
+        for section in galleries_sections:
+            section_id = section.id
+            if basename.replace(".", "-") in section_id:
+                return section
 
-        path = item["section_image"].replace("http://localhost:8080/Plone", "")
-        return api.content.get(path=path)
+    def handle_image_container(self, item):
+        section_image = item.get("section_image", None)
+        if not section_image:
+            return self.get_parent_as_container(item)
+        path = section_image.replace("http://localhost:8080", "").replace(".", "-")
+        output = api.content.get(path=path)
+        if not output:
+            output = self.handle_image_container_multi(path)
+        return output
