@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from plone import api
-
+from plone.registry.interfaces import IRegistry
+from zope.component import queryUtility
+from affinitic.smartweb.utils import uninstall_smartweb_pas_plugins
 
 def update_types(context):
     """
@@ -41,3 +43,7 @@ def update_portlet(context):
     portal_setup.runImportStepFromProfile(
         "profile-affinitic.smartweb:Add Portlet", "portlets"
     )
+
+
+def uninstall_pas_plugins_kimug(context):
+    uninstall_smartweb_pas_plugins(context)

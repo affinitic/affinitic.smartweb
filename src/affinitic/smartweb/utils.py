@@ -4,7 +4,8 @@ from plone import api
 from plone.i18n.normalizer import IIDNormalizer
 from zope.component import getUtility
 from zope.i18n import translate
-
+from plone.registry.interfaces import IRegistry
+from zope.component import queryUtility
 
 def delete_i_am_i_find_folders(context):
     # TODO: context could be the Plone Site OR a Language Root Folder; handle both cases
@@ -16,6 +17,21 @@ def delete_i_am_i_find_folders(context):
         translated_id = normalizer.normalize(translated_title)
         if translated_id in portal:
             api.content.delete(obj=portal[translated_id])
+
+
+def uninstall_smartweb_pas_plugins(context):
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runAllImportStepsFromProfile(
+        "profile-pas.plugins.kimug:uninstall"
+    )
+    portal_setup.runAllImportStepsFromProfile(
+        "profile-pas.plugins.oidc:uninstall"
+    )
+    registry = queryUtility(IRegistry)
+    if "plone.external_login_url" in registry:
+        registry["plone.external_login_url"] = ""
+    if "plone.external_logout_url" in registry:
+        registry["plone.external_logout_url"] = ""
 
 
 def check_if_folder_exist(context, folder_id, interface=IFolderish):

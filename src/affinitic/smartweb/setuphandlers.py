@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.interfaces import INonInstallable
 from affinitic.smartweb.utils import delete_i_am_i_find_folders
+from affinitic.smartweb.utils import uninstall_smartweb_pas_plugins
 from zope.interface import implementer
 
 
@@ -18,6 +19,7 @@ def post_install(context):
     # Do something at the end of the installation of this package.
 
     delete_i_am_i_find_folders(context)
+    uninstall_smartweb_pas_plugins(context)
 
 
 def post_install_types(context):

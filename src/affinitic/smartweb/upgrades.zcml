@@ -58,6 +58,15 @@
     handler=".upgrades.update_types"
     />
 
+  <genericsetup:upgradeStep
+    source="1006"
+    destination="1007"
+    title="Uninstall pas.plugins.kimug"
+    description=""
+    profile="affinitic.smartweb:default"
+    handler=".upgrades.uninstall_pas_plugins_kimug"
+    />
+
 <!-- Event and News Types  -->
 
   <genericsetup:upgradeStep
