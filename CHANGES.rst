@@ -5,6 +5,12 @@ Changelog
 1.0.0a17 (unreleased)
 ---------------------
 
+- Change imio pas plugin uninstall
+  [jchandelle]
+
+- Fix import script
+  [jchandelle]
+
 - Add new section to copy visual from another section
   [jchandelle]
 
