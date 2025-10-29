@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a17 (unreleased)
+1.0.0a17 (2025-10-29)
 ---------------------
 
 - Change imio pas plugin uninstall
