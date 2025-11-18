@@ -200,10 +200,20 @@ class CustomImportDocumentContent(ImportContent):
         if target_obj and target_obj.portal_type == "Collection":
             section.collection = target_obj
 
+    def clear_collage(self, obj):
+        contents = obj.listFolderContents()
+        for content in contents:
+            api.content.delete(
+                obj=content
+            )
+
     def handle_collage(self, obj, item):
         collages = item.get("collages", None)
         if collages is None:
             return
+
+        if self.update_existing:
+            self.clear_collage(obj)
         for collage in collages:
             target_type = collage.get("target_type", None)
             if not target_type:

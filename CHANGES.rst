@@ -5,7 +5,8 @@ Changelog
 1.0.0a18 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Add possbility to update collage import
+  [jchandelle]
 
 
 1.0.0a17 (2025-10-29)
