@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a18 (unreleased)
+1.0.0a18 (2025-11-18)
 ---------------------
 
 - Add possbility to update collage import
