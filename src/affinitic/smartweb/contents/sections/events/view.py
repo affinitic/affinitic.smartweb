@@ -6,6 +6,7 @@ from dateutil.parser import parse
 from imio.smartweb.core.config import EVENTS_URL
 from imio.smartweb.core.contents.sections.events.view import EventsView
 from imio.smartweb.core.utils import batch_results
+from imio.smartweb.core.utils import get_scale_url
 
 import pytz
 
@@ -18,9 +19,9 @@ def naive_to_aware_datetime(date_time):
 class AffiniticEventsView(EventsView):
     """Events Section view"""
 
-    @property
     def items(self):
         today = datetime.today()
+        orientation = self.context.orientation
         max_items = self.context.nb_results_by_batch * self.context.max_nb_batches
         events = sorted(
             [
@@ -36,24 +37,28 @@ class AffiniticEventsView(EventsView):
         items = events[:max_items]
         results = []
         for item in items:
-            item_url = item.absolute_url()
             start = item.start
             end = item.end
             date_dict = {"start": start, "end": end}
-            image_url = ""
-            if item.image:
-                image_url = f"{item_url}/@@images/image/{image_scale}"
-            results.append(
+            url = item.absolute_url()
+            scale_url = get_scale_url(
+                item, self.request, "image", image_scale, orientation
+            )
+            dict_item = (
                 {
                     "title": item.title,
                     "description": item.description,
                     "category": item.subject,
                     "event_date": date_dict,
-                    "url": item_url,
-                    "image": image_url,
+                    "url": url,
                     "has_image": bool(item.image),
                 }
             )
+            if scale_url == "":
+                dict_item["bad_scale"] = image_scale
+                scale_url = f"{url}/@@images/image/{image_scale}"
+            dict_item["image"] = scale_url
+            results.append(dict_item)
         return batch_results(results, self.context.nb_results_by_batch)
 
     @property

@@ -20,35 +20,43 @@
             tal:attributes="class string:container section-container section-text ${collapse_klass_container};
                                 id string:container-section-${section_context/id};"
           >
-              <tal:def tal:define="hide_title section_context/hide_title;
-                      collapsible_section section_context/collapsible_section"
-                      i18n:domain="imio.smartweb">
+            <tal:def tal:define="hide_title section_context/hide_title;
+                    collapsible_section section_context/collapsible_section"
+                    i18n:domain="imio.smartweb">
 
-                <h2 tal:condition="not: hide_title"
-                    class="section-title"><a
-                    href=""
-                    role="button"
-                    aria-expanded="false"
-                    data-bs-toggle="collapse"
-                    data-bs-target=""
-                    tal:omit-tag="not: collapsible_section"
-                    tal:attributes="data-bs-target string:#body-section-${section_context/id}"
-                    tal:content="section_context/title"
-                /></h2>
-                <h2 tal:condition="python: can_edit_sections and hide_title"
-                    class="hidden-section-title hide-in-preview"><a
-                    href=""
-                    role="button"
-                    aria-expanded="false"
-                    data-bs-toggle="collapse"
-                    data-bs-target=""
-                    tal:omit-tag="not: collapsible_section"
-                    tal:attributes="data-bs-target string:#body-section-${section_context/id}"
-                    tal:content="section_context/title"
-                /></h2>
-
-              </tal:def>
-
+              <h2 tal:condition="not: hide_title"
+                  class="section-title"><a
+                  href=""
+                  role="button"
+                  aria-expanded="false"
+                  data-bs-toggle="collapse"
+                  data-bs-target=""
+                  tal:omit-tag="not: collapsible_section"
+                  tal:attributes="data-bs-target string:#body-section-${section_context/id}"
+                  tal:content="section_context/title"
+              /></h2>
+              <h2 tal:condition="python: can_edit_sections and hide_title"
+                  class="hidden-section-title hide-in-preview"><a
+                  href=""
+                  role="button"
+                  aria-expanded="false"
+                  data-bs-toggle="collapse"
+                  data-bs-target=""
+                  tal:omit-tag="not: collapsible_section"
+                  tal:attributes="data-bs-target string:#body-section-${section_context/id}"
+                  tal:content="section_context/title"
+              /></h2>
+            </tal:def>
+              <h2 tal:condition="python: context.show_section_title"
+                  class=""><a
+                  href=""
+                  role="button"
+                  aria-expanded="false"
+                  data-bs-toggle="collapse"
+                  data-bs-target=""
+                  tal:attributes="data-bs-target string:#body-section-${context/id}"
+                  tal:content="context/title"
+              /></h2>
             <div
               tal:define="collapse_klass python: 'collapse' if section_context.collapsible_section else '';
                               klass string:body-section figure-${section_context/alignment} figure-${section_context/image_size} ${collapse_klass};"

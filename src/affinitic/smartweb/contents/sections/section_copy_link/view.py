@@ -7,6 +7,7 @@ from imio.smartweb.core.contents.sections.views import SectionView
 from plone import api
 from plone.restapi.types.utils import get_info_for_type
 from zope.component import getMultiAdapter
+from imio.smartweb.core.utils import get_scale_url
 
 import locale
 
@@ -38,27 +39,14 @@ class SectionCopyLinkView(SectionView):
             return None
         return self.context.section_link.to_object
 
-    # def render_linked(self):
-    #     linked = getattr(self.context, 'section_link', None)
-    #     if linked and linked.to_object:
-            # view = linked.to_object.restrictedTraverse('@@view')
-
-            # return self.context.restrictedTraverse(
-            #     f"{linked.to_object.absolute_url_path()}/view/macros/content-core"
-            # )
-
-            # view = getMultiAdapter((linked.to_object, self.request), name="view")
-            # proxy = ViewProxy(view, can_edit_sections=False)
-            # return proxy()
-            # view.__dict__['can_edit_sections'] = False
-            # setattr(view, "can_edit_sections", False)
-            # return view.index()
-        # return "<p>No linked section defined.</p>"
-    
-    # def __call__(self):
-    #     linked = getattr(self.context, 'linked_section', None)
-    #     if linked and linked.to_object:
-    #         view = getMultiAdapter((linked.to_object, self.request), name="view")
-    #         return view()
-    #     return "No linked section defined."
-    
+    def get_scale_url(self, item, scale="vignette"):
+        orientation = self.context.orientation
+        if item.portal_type == "imio.smartweb.SectionGallery":
+            images = item.getObject().listFolderContents()
+            if not images:
+                return ""
+            scale_url = get_scale_url(
+                images[0], self.request, "image", scale, orientation
+            )
+            return scale_url
+        return get_scale_url(item, self.request, "image", scale, orientation)

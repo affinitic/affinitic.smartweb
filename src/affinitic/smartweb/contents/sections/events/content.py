@@ -54,15 +54,36 @@ class ISectionEvents(ISection):
         max=12,
     )
 
+    display_newsfolders_titles = schema.Bool(
+        title=_("Display news folders titles"),
+        description=_("If checked, display news folders titles"),
+        required=False,
+    )
+
     link_text = schema.TextLine(
         title=_("Text for the link to the events view"),
         defaultFactory=see_all_default,
         required=True,
     )
 
-    model.fieldset("layout", fields=["show_items_description"])
+    model.fieldset(
+    "layout",
+    fields=[
+        "show_items_lead_image",
+        "show_items_description",
+        "show_items_date",
+    ],
+    )
+    show_items_lead_image = schema.Bool(
+        title=_("Show items lead image"), required=False
+    )
+
     show_items_description = schema.Bool(
         title=_("Show items description"), required=False
+    )
+
+    show_items_date = schema.Bool(
+        title=_("Show items publication date"), required=False
     )
 
 

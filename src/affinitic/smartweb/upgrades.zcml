@@ -113,6 +113,15 @@
     profile="affinitic.smartweb:Event and News Types"
     handler=".upgrades.update_types_event_news"
     />
+  
+  <genericsetup:upgradeStep
+    source="1005"
+    destination="1006"
+    title="Update event and news behavior"
+    description=""
+    profile="affinitic.smartweb:Event and News Types"
+    handler=".upgrades.update_types_event_news"
+    />
 
 <!-- Portlet -->
 

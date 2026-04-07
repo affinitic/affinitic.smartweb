@@ -25,6 +25,11 @@ class ISectionCopyLink(ISection):
         title=_("Section to display"),
         vocabulary="plone.app.vocabularies.Catalog",
     )
+    
+    show_section_title = schema.Bool(
+        title = _("Display this section title"),
+        required=False
+    )
 
 
 @implementer(ISectionCopyLink)

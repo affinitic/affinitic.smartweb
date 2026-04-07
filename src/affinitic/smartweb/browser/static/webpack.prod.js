@@ -18,7 +18,7 @@ module.exports = {
   //   },
   // },
   output: {
-    filename: "[name].[fullhash:20].js",
+    filename: "[name].js",
     path: buildPath,
   },
   module: {
@@ -83,6 +83,14 @@ module.exports = {
         options: {
           name: "fonts/[name].[ext]",
         },
+      },
+      {
+        test: /\.less$/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'less-loader'
+        ],
       },
     ],
   },
