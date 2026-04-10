@@ -5,7 +5,8 @@ Changelog
 1.0.0a19 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Upgrade code
+  [jchandelle]
 
 
 1.0.0a18 (2025-11-18)
