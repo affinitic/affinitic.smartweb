@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a19 (unreleased)
+1.0.0a19 (2026-04-10)
 ---------------------
 
 - Upgrade code
